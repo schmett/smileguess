@@ -1,5 +1,16 @@
+/* Import Dependencies */
+import { connect } from 'react-redux';
+
+/* Import Provider */
+// define in provider
+import { defineAction } from '../providers/providers.js';
+
+/* Import Components */
+
+// Keep this as it is until we have working components
+
 import React, {
-	Alert,
+  Alert,
   View,
   Text,
   TouchableHighlight,
@@ -12,7 +23,7 @@ const UIExplorerBlock = require('./UIExplorerBlock');
 
 const alertMessage = 'Nice job, you win!';
 
-class alertBlock extends React.Component ({
+class AlertBlock extends React.Component ({
   render: function() {
     return (
       <View>
@@ -35,7 +46,7 @@ class AlertOfGameWon extends React.Component ({
   render: function() {
     return (
       <UIExplorerBlock title={'Alert'}>
-        <SimpleAlertExampleBlock />
+        <AlertBlock />
       </UIExplorerBlock>
     );
   },
