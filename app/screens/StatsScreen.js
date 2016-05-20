@@ -7,9 +7,12 @@ import {
   StyleSheet,
   Text,
   View,
+  Dimensions,
 } from 'react-native';
 
 import { connect } from 'react-redux';
+
+const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
 
 // import provider
 import { mapStatsScreen } from '../providers/providers.js';
@@ -40,7 +43,7 @@ const styles = StyleSheet.create({
     paddingTop: 13,
     paddingBottom: 13,
     paddingLeft: 10,
-    width: 100,
+    flex: 0.3,
   },
   points: {
     fontSize: 12,
@@ -49,7 +52,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 14,
     paddingBottom: 14,
-    width: 80,
+    flex: 0.2,
   },
   wins: {
     fontSize: 12,
@@ -58,7 +61,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 14,
     paddingBottom: 14,
-    width: 80,
+    flex: 0.2,
   },
   emojicoins: {
     fontSize: 12,
@@ -68,7 +71,7 @@ const styles = StyleSheet.create({
     paddingTop: 14,
     paddingBottom: 14,
     paddingRight: 10,
-    width: 80,
+    flex: 0.3,
   },
   thumbnail: {
     width: 43,
